@@ -35,5 +35,3 @@ var MessagesView = {
   }
 
 };
-
-module.exports = MessagesView;

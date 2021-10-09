@@ -82,6 +82,10 @@ var requestHandler = function(request, response) {
     });
     request.on('end', () => {
       newMessage = JSON.parse(newMessage);
+      var ID = data.results.length + 1;
+      newMessage.uniqueID = ID;
+      var time = new Date();
+      newMessage.time = time;
       data.results.push(newMessage);
     });
   } else if (request.method === 'OPTIONS') {
